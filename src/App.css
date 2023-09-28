@@ -1,38 +1,165 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+header {
+  display: flex;
+  justify-content: space-between;
+  margin-block: 1rem;
+  background: rgba(238, 232, 232, 0.2);
+  align-items: center;
+  padding: 1rem 0.4rem;
+}
+
+.logo,
+.nav-link,
+.author {
+  text-decoration: none;
+  color: #333;
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+nav {
+  display: flex;
+  gap: 1.2rem;
+  font-size: 1.2rem;
+}
+
+.post {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 1.2rem;
+  margin-bottom: 3rem;
+  color: #444;
+}
+
+@media screen and (max-width: 600px) {
+  .post {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: center;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.image {
+  max-width: 100%;
+}
+
+.post-title {
+  margin: 0;
+}
+
+.no-decor {
+  text-decoration: none;
+  color: inherit;
+}
+
+.post-info,
+.post-summary {
+  margin-block: 0.5rem;
+}
+
+.author {
+  margin-right: 10px;
+}
+
+/* Login & Register */
+.login,
+.register {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+input {
+  display: block;
+  width: 100%;
+  margin-block: 0.6rem;
+  padding: 8px;
+  border-radius: 5px;
+  background: rgb(243, 239, 239);
+  border: 1px solid rgb(211, 207, 207);
+  outline: 0;
+}
+
+input::placeholder {
+  font-size: 0.9rem;
+}
+
+input:focus {
+  font-size: 1rem;
+}
+
+button {
+  width: 100%;
+  background: rgb(54, 172, 246);
+  padding: 8px;
+  border: 0;
+  border-radius: 0.7rem;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.form-title {
+  text-align: center;
+  font-size: 2.3rem;
+  color: rgb(17, 120, 210);
+  font-weight: bold;
+}
+
+/* post page */
+
+.postpage {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+  /* align-items: center; */
+}
+
+.postpage-title {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.postpage-image {
+  max-height: 300px;
+  margin-bottom: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Edit Posts */
+.btn-posts {
+  background: gray;
+  padding: 0.5rem 2rem;
+  border-radius: 1rem;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  /* max-width: 200px; */
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-posts:hover {
+  background: #999;
+}
+
+/* modal */
+.modal {
+  width: 100%;
 }
